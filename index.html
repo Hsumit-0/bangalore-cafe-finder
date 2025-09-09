@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bangalore Cafe Finder</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>☕ Bangalore Cafe Finder</h1>
+  </header>
+
+  <section class="controls">
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="low">₹₹ (≤500 for two)</option>
+      <option value="mid">₹₹₹ (501–1200)</option>
+      <option value="high">₹₹₹₹ (>1200)</option>
+    </select>
+    <select id="ambienceFilter">
+      <option value="all">All Ambiences</option>
+      <option value="cozy">Cozy</option>
+      <option value="outdoor">Outdoor</option>
+      <option value="artsy">Artsy</option>
+      <option value="modern">Modern</option>
+    </select>
+    <label><input type="checkbox" id="vegOnly"> Veg-Friendly</label>
+    <button id="showAll">Show All Cafés</button>
+  </section>
+
+  <main class="container">
+    <aside id="results" class="sidebar">
+      <h2>Curated Cafés</h2>
+      <div id="list"></div>
+    </aside>
+    <div id="map" class="map"></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
